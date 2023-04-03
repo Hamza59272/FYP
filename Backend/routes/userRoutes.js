@@ -2,7 +2,7 @@ var express = require ('express')
 const router = express.Router()
 var {
   authUser,
-  getUsers,
+  TestingPage,
   registerUser,
   getUserProfile,
   updateUserProfile
@@ -13,7 +13,8 @@ var { protect, admin } = require('../middleware/authMiddleware.js')
 require('dotenv').config();
 const {SECRET_KEY} = process.env
 
-router.route('/').post(registerUser).get(protect, admin, getUsers)
+router.route('/').get(TestingPage)
+router.route('/signup').post(registerUser)
 router.post('/login', authUser)
 router
   .route('/profile')
