@@ -2,6 +2,7 @@ var express = require ('express')
 const router = express.Router()
 var {
   authUser,
+  getUsers,
   registerUser,
   getUserProfile,
   updateUserProfile

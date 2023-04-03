@@ -1,1 +1,7 @@
-npm init
+express-generator
+jwtwebtoken
+dotenv
+mongoose
+morgan
+mongodb
+bycriptjs
